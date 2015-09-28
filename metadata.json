@@ -1,0 +1,42 @@
+{
+  "name": "ULHPC/syslog",
+  "version": "0.1.1",
+  "author": "S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team",
+  "mail": "hpc-sysadmins@uni.lu",
+  "summary": "Configure and manage syslog",
+  "description": "Configure and manage syslog",
+  "license": "GPL-3.0",
+  "source": "https://github.com/ULHPC/puppet-syslog",
+  "docs_project": "ulhpc-puppet-syslog",
+  "project_page": "https://github.com/ULHPC/puppet-syslog",
+  "issues_url": "https://github.com/ULHPC/puppet-syslog/issues",
+  "forge_url": "https://forge.puppetlabs.com/ULHPC/syslog",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">=4.2.2 <5.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "tags": [
+    "syslog"
+  ],
+  "classes": [
+    "syslog",
+    "syslog::common",
+    "syslog::common::debian",
+    "syslog::common::redhat",
+    "syslog::params"
+  ],
+  "definitions": [
+    "syslog::conf"
+  ]
+}
