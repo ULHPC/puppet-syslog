@@ -26,5 +26,17 @@
       ]
     }
   ],
-  "tags": ["syslog"]
+  "tags": [
+    "syslog"
+  ],
+  "classes": [
+    "syslog",
+    "syslog::common",
+    "syslog::common::debian",
+    "syslog::common::redhat",
+    "syslog::params"
+  ],
+  "definitions": [
+    "syslog::conf"
+  ]
 }
