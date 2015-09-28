@@ -1,7 +1,7 @@
-# File::      <tt>syslog-params.pp</tt>
-# Author::    Sebastien Varrette (Sebastien.Varrette@uni.lu)
-# Copyright:: Copyright (c) 2011 Sebastien Varrette
-# License::   GPL v3
+# File::      <tt>params.pp</tt>
+# Author::    S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team (hpc-sysadmins@uni.lu)
+# Copyright:: Copyright (c) 2015 S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team
+# License::   Gpl-3.0
 #
 # ------------------------------------------------------------------------------
 # = Class: syslog::params
@@ -30,9 +30,9 @@ class syslog::params {
     ###########################################
 
     # ensure the presence (or absence) of syslog
-    $ensure = $syslog_ensure ? {
+    $ensure = $::syslog_ensure ? {
         ''      => 'present',
-        default => "${syslog_ensure}"
+        default => $::syslog_ensure
     }
 
 
@@ -79,7 +79,7 @@ class syslog::params {
     }
 
     $configdir = $::operatingsystem ? {
-        default => "/etc/rsyslog.d",
+        default => '/etc/rsyslog.d',
     }
     $configdir_mode = $::operatingsystem ? {
         default => '0755',

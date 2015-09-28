@@ -15,7 +15,7 @@
 
 include 'syslog::params'
 
-$names = ["ensure", "protocol", "port", "packagename"]
+$names = ['ensure', 'protocol', 'port', 'packagename']
 
 notice("syslog::params::ensure = ${syslog::params::ensure}")
 notice("syslog::params::protocol = ${syslog::params::protocol}")

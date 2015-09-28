@@ -1,7 +1,7 @@
-# File::      <tt>syslog-conf.pp</tt>
-# Author::    Sebastien Varrette (<Sebastien.Varrette@uni.lu>)
-# Copyright:: Copyright (c) 2011 Sebastien Varrette (www[http://varrette.gforge.uni.lu])
-# License::   GPLv3
+# File::      <tt>conf.pp</tt>
+# Author::    S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team (hpc-sysadmins@uni.lu)
+# Copyright:: Copyright (c) 2015 S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team
+# License::   Gpl-3.0
 #
 # ------------------------------------------------------------------------------
 # = Defines: syslog::conf
@@ -10,7 +10,7 @@
 #
 # == Pre-requisites
 #
-# * The class 'syslog' should have been instanciated
+# * The class 'syslog' should have been instantiated
 #
 # == Parameters:
 #
@@ -78,21 +78,17 @@ define syslog::conf (
     }
 
     file{ "${syslog::params::configdir}/${configname}.conf":
-        owner   => "${syslog::params::configfile_owner}",
-        group   => "${syslog::params::configfile_group}",
-        mode    => "${syslog::params::configfile_mode}",
-        ensure  => "${ensure}",
+        ensure  => $ensure,
+        owner   => $syslog::params::configfile_owner,
+        group   => $syslog::params::configfile_group,
+        mode    => $syslog::params::configfile_mode,
         content => $real_content,
         source  => $real_source,
         require => [
                     Package['syslog'],
-                    File["${syslog::params::configdir}"]
+                    File[$syslog::params::configdir]
                     ],
-        notify  => Service['syslog'],        
+        notify  => Service['syslog'],
     }
 
 }
-
-
-
-
