@@ -15,12 +15,23 @@
 
 include 'syslog::params'
 
-$names = ['ensure', 'protocol', 'port', 'packagename']
+$names = ["ensure", "packagename", "logrotate_package", "servicename", "processname", "hasstatus", "hasrestart", "configfile", "configfile_mode", "configfile_owner", "configfile_group", "configdir", "configdir_mode", "configdir_owner", "configdir_group"]
 
 notice("syslog::params::ensure = ${syslog::params::ensure}")
-notice("syslog::params::protocol = ${syslog::params::protocol}")
-notice("syslog::params::port = ${syslog::params::port}")
 notice("syslog::params::packagename = ${syslog::params::packagename}")
+notice("syslog::params::logrotate_package = ${syslog::params::logrotate_package}")
+notice("syslog::params::servicename = ${syslog::params::servicename}")
+notice("syslog::params::processname = ${syslog::params::processname}")
+notice("syslog::params::hasstatus = ${syslog::params::hasstatus}")
+notice("syslog::params::hasrestart = ${syslog::params::hasrestart}")
+notice("syslog::params::configfile = ${syslog::params::configfile}")
+notice("syslog::params::configfile_mode = ${syslog::params::configfile_mode}")
+notice("syslog::params::configfile_owner = ${syslog::params::configfile_owner}")
+notice("syslog::params::configfile_group = ${syslog::params::configfile_group}")
+notice("syslog::params::configdir = ${syslog::params::configdir}")
+notice("syslog::params::configdir_mode = ${syslog::params::configdir_mode}")
+notice("syslog::params::configdir_owner = ${syslog::params::configdir_owner}")
+notice("syslog::params::configdir_group = ${syslog::params::configdir_group}")
 
 #each($names) |$v| {
 #    $var = "syslog::params::${v}"
