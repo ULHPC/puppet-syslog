@@ -7,7 +7,7 @@
 ![Supported Platforms](http://img.shields.io/badge/platform-debian-lightgrey.svg)
 [![Documentation Status](https://readthedocs.org/projects/ulhpc-puppet-syslog/badge/?version=latest)](https://readthedocs.org/projects/ulhpc-puppet-syslog/?badge=latest)
 
-      Copyright (c) 2015 S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team <hpc-sysadmins@uni.lu>
+      Copyright (c) 2017 S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team <hpc-sysadmins@uni.lu>
 
 | [Project Page](https://github.com/ULHPC/puppet-syslog) | [Documentation](http://ulhpc-puppet-syslog.readthedocs.org/en/latest/) | [Issues](https://github.com/ULHPC/puppet-syslog/issues) |
 

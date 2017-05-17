@@ -9,7 +9,7 @@
 
 Configure and manage syslog
 
-      Copyright (c) 2015 S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team <hpc-sysadmins@uni.lu>
+      Copyright (c) 2017 S. Varrette, H. Cartiaux, V. Plugaru, S. Diehl aka. UL HPC Management Team <hpc-sysadmins@uni.lu>
       
 
 | [Project Page](https://github.com/ULHPC/puppet-syslog) | [Sources](https://github.com/ULHPC/puppet-syslog) | [Documentation](https://ulhpc-puppet-syslog.readthedocs.org/en/latest/) | [Issues](https://github.com/ULHPC/puppet-syslog/issues) |
@@ -21,8 +21,14 @@ Configure and manage syslog.
 This module implements the following elements: 
 
 * __Puppet classes__:
+    - `syslog` 
+    - `syslog::common` 
+    - `syslog::common::debian` 
+    - `syslog::common::redhat` 
+    - `syslog::params` 
 
 * __Puppet definitions__: 
+    - `syslog::conf` 
 
 All these components are configured through a set of variables you will find in
 [`manifests/params.pp`](manifests/params.pp). 
@@ -51,6 +57,23 @@ Use it as follows:
 
 See also [`tests/init.pp`](tests/init.pp)
 
+
+### Definition `syslog::conf`
+
+The definition `syslog::conf` provides ...
+This definition accepts the following parameters:
+
+* `$ensure`: default to 'present', can be 'absent'
+* `$content`: specify the contents of the directive as a string
+* `$source`: copy a file as the content of the directive.
+
+Example:
+
+        syslog::conf { 'toto':
+		      ensure => 'present',
+        }
+
+See also [`tests/conf.pp`](tests/conf.pp)
 
 
 ## Librarian-Puppet / R10K Setup
