@@ -30,11 +30,7 @@ class syslog::params {
     ###########################################
 
     # ensure the presence (or absence) of syslog
-    $ensure = $::syslog_ensure ? {
-        ''      => 'present',
-        default => $::syslog_ensure
-    }
-
+    $ensure = 'present',
 
     #### MODULE INTERNAL VARIABLES  #########
     # (Modify to adapt to unsupported OSes)
@@ -64,7 +60,7 @@ class syslog::params {
         default => true,
     }
 
-    # Configuration file 
+    # Configuration file
     $configfile = $::operatingsystem ? {
         default => '/etc/rsyslog.conf',
     }
@@ -90,12 +86,6 @@ class syslog::params {
     $configdir_group = $::operatingsystem ? {
         default => 'root',
     }
-
-    # $pkgmanager = $::operatingsystem ? {
-    #     /(?i-mx:ubuntu|debian)/	       => [ '/usr/bin/apt-get' ],
-    #     /(?i-mx:centos|fedora|redhat)/ => [ '/bin/rpm', '/usr/bin/up2date', '/usr/bin/yum' ],
-    #     default => []
-    # }
 
 
 }
