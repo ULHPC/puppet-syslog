@@ -30,7 +30,7 @@ class syslog::params {
     ###########################################
 
     # ensure the presence (or absence) of syslog
-    $ensure = 'present',
+    $ensure = 'present'
 
     #### MODULE INTERNAL VARIABLES  #########
     # (Modify to adapt to unsupported OSes)
