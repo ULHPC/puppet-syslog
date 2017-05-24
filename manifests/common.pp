@@ -36,7 +36,7 @@ class syslog::common {
         owner   => $syslog::params::configfile_owner,
         group   => $syslog::params::configfile_group,
         mode    => $syslog::params::configfile_mode,
-        source  => 'puppet:///modules/syslog/rsyslog.conf',
+        source  => "puppet:///modules/syslog/${::operatingsystem}/${::lsbmajdistrelease}/rsyslog.conf",
         require => [
                     Package['syslog'],
                     File[$syslog::params::configdir]
