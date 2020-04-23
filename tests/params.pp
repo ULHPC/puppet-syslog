@@ -13,9 +13,9 @@
 #
 #
 
-include 'syslog::params'
+include '::syslog::params'
 
-$names = ["ensure", "packagename", "logrotate_package", "servicename", "processname", "hasstatus", "hasrestart", "configfile", "configfile_mode", "configfile_owner", "configfile_group", "configdir", "configdir_mode", "configdir_owner", "configdir_group"]
+$names = ['ensure', 'packagename', 'logrotate_package', 'servicename', 'processname', 'hasstatus', 'hasrestart', 'configfile', 'configfile_mode', 'configfile_owner', 'configfile_group', 'configdir', 'configdir_mode', 'configdir_owner', 'configdir_group']
 
 notice("syslog::params::ensure = ${syslog::params::ensure}")
 notice("syslog::params::packagename = ${syslog::params::packagename}")

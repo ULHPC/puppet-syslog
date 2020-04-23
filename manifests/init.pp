@@ -51,8 +51,8 @@ inherits syslog::params
     }
 
     case $::operatingsystem {
-        debian, ubuntu:         { include syslog::common::debian }
-        redhat, fedora, centos: { include syslog::common::redhat }
+        'debian', 'ubuntu':         { include ::syslog::common::debian }
+        'redhat', 'fedora', 'centos': { include ::syslog::common::redhat }
         default: {
             fail("Module ${module_name} is not supported on ${::operatingsystem}")
         }
