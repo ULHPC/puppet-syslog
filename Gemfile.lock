@@ -1,46 +1,47 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.8)
+    activesupport (4.2.11.1)
       i18n (~> 0.7)
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     artii (2.1.2)
-    awesome_print (1.7.0)
+    awesome_print (1.8.0)
+    concurrent-ruby (1.1.6)
     configatron (3.2.0)
     deep_merge (1.0.1)
     diff-lcs (1.2.5)
-    diffy (3.2.0)
+    diffy (3.3.0)
     facter (2.4.6)
-    falkorlib (0.7.7)
+    falkorlib (0.8.6)
       activesupport (~> 4.0)
       artii (>= 2.1)
       awesome_print (~> 1.2)
-      configatron (~> 3.2)
+      configatron (~> 3.0)
       deep_merge (~> 1.0.1)
       diffy (>= 3.0)
       facter (~> 2.4.1)
       git_remote_branch (~> 0)
-      json (~> 1.8)
+      json (~> 2.0)
       license-generator (~> 0)
       logger (>= 1.2.8)
       minigit (~> 0)
-      rake (~> 10.1, >= 10.1.0)
+      rake (>= 12.3.3)
       term-ansicolor (~> 1.3)
-      thor (>= 0.19)
-      thor-zsh_completion
+      thor (>= 1.0)
     git_remote_branch (0.3.8)
     hiera (3.0.1)
       json_pure
-    i18n (0.8.1)
-    json (1.8.6)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
+    json (2.3.0)
     json_pure (1.8.2)
     license-generator (0.4.1)
       thor
-    logger (1.2.8)
+    logger (1.3.0)
     minigit (0.0.4)
-    minitest (5.10.2)
+    minitest (5.12.0)
     puppet (4.2.2)
       facter (> 2.0, < 4)
       hiera (>= 2.0, < 4)
@@ -48,7 +49,7 @@ GEM
     puppet-lint (1.1.0)
     puppet-syntax (2.0.0)
       rake
-    rake (10.5.0)
+    rake (12.3.3)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
       rspec-expectations (~> 3.3.0)
@@ -64,13 +65,14 @@ GEM
     rspec-puppet (2.2.0)
       rspec
     rspec-support (3.3.0)
-    term-ansicolor (1.6.0)
+    sync (0.5.0)
+    term-ansicolor (1.7.1)
       tins (~> 1.0)
-    thor (0.19.4)
-    thor-zsh_completion (0.1.2)
+    thor (1.0.1)
     thread_safe (0.3.6)
-    tins (1.14.0)
-    tzinfo (1.2.3)
+    tins (1.24.1)
+      sync
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
 
 PLATFORMS
@@ -85,4 +87,4 @@ DEPENDENCIES
   rspec-puppet
 
 BUNDLED WITH
-   1.15.0
+   1.17.2
