@@ -1,6 +1,6 @@
 {
   "name": "ULHPC/syslog",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "UL HPC Team",
   "mail": "hpc-sysadmins@uni.lu",
   "summary": "Configure and manage syslog",
